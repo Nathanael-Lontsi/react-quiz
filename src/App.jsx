@@ -1,27 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
+import { QuestionProvider } from './Context';
+import Home from './Pages/Home/Home';
+import QuizPage from './Pages/Quiz/QuizPage';
+import Results from './Pages/Result/Results';
+import useFetch from './Components/Hooks/useFetch';
+import useIncrement from './Components/Hooks/useIncrement';
 
-function App() {
+export default function App() {
+  const [quiz, setQuiz] = useFetch();
+  const [pageNumber, setPageNumber] = useIncrement(0);
+  const [finalResult, setFinalResult] = useState({ passed: 0, failed: 0 });
+  /* const [score, setScore] = useState[0]; */
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          <code>src/App.js</code>
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <QuestionProvider
+        value={{
+          quiz,
+          setQuiz,
+          pageNumber,
+          setPageNumber,
+          finalResult,
+          setFinalResult,
+        }}
+      >
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="/quiz/:id" element={<QuizPage />} />
+            <Route path="/result" element={<Results />} />
+          </Routes>
+        </BrowserRouter>
+      </QuestionProvider>
     </div>
   );
 }
-
-export default App;

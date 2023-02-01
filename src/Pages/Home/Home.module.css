@@ -1,0 +1,40 @@
+.Home__Page {
+  align-items: center;
+  background: #f0ffff;
+  color: #11142b;
+  display: flex;
+  flex-direction: column;
+  font-family: lora;
+  height: 97vh;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 62px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 25px;
+  margin-top: -10px;
+}
+
+.emoji {
+  font-size: 30px;
+  margin-top: -10px;
+}
+
+.Start__button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: mulish;
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+
+.Start__button:hover {
+  color: #f8f8ff;
+  background-color: #008080;
+}
