@@ -10,8 +10,8 @@ import useIncrement from './Components/Hooks/useIncrement';
 export default function App() {
   const [quiz, setQuiz] = useFetch();
   const [pageNumber, setPageNumber] = useIncrement(0);
-  const [finalResult, setFinalResult] = useState({ passed: 0, failed: 0 });
-  /* const [score, setScore] = useState[0]; */
+  /* const [finalResult, setFinalResult] = useState({ passed: 0, failed: 0 }); */
+  const [count, setCount] = useState(1);
 
   return (
     <div className="App">
@@ -21,8 +21,8 @@ export default function App() {
           setQuiz,
           pageNumber,
           setPageNumber,
-          finalResult,
-          setFinalResult,
+          count,
+          setCount,
         }}
       >
         <BrowserRouter>

@@ -34,6 +34,7 @@ h5 {
 .Question__Box {
   background: #008080;
   border-radius: 10px;
+  box-shadow: #414040 0px 5px 15px;
   color: #f0ffff;
   display: flex;
   justify-content: center;
@@ -78,4 +79,32 @@ button {
 .FalseBtn:hover {
   color: #f0ffff;
   background: #b22222;
+}
+
+@media screen and (max-width: 768px) {
+  .Question__Box {
+    height: 60%;
+    width: 60%;
+  }
+
+  .TrueFalse {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .Question__Page {
+    height: 120vh;
+  }
+
+  .Question__Box {
+    height: 70%;
+    width: 70%;
+  }
+
+  .TrueFalse {
+    position: absolute;
+    gap: 20px;
+    top: 95%;
+  }
 }
