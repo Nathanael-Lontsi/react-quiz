@@ -17,7 +17,7 @@ export default function Home() {
         <li>
           Answer either <b>TRUE</b> or <b>FALSE</b>
         </li>
-        <li>Each questions counts ONE(1) mark</li>
+        <li>Each questions counts ONE (1) mark</li>
         <li>
           The questions are of <b>Category:</b> undefined, <b>Difficulty:</b>{' '}
           hard and <b>Type:</b> boolean
