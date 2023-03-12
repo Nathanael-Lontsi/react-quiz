@@ -1,0 +1,110 @@
+.Question__Page {
+  align-items: center;
+  background: #f0ffff;
+  color: #11142b;
+  display: flex;
+  flex-direction: column;
+  font-family: mulish;
+  height: 97vh;
+  justify-content: center;
+}
+
+h3 {
+  color: #11142b;
+  font-family: mulish;
+  font-size: 40px;
+  font-weight: 400;
+  margin-top: -10px;
+}
+
+h4 {
+  color: #11142b;
+  font-family: mulish;
+  font-size: 20px;
+  margin-top: -10px;
+}
+
+h5 {
+  font-family: mulish;
+  font-size: 20px;
+  position: relative;
+  top: 10%;
+}
+
+.Question__Box {
+  background: #008080;
+  border-radius: 10px;
+  box-shadow: #414040 0px 5px 15px;
+  color: #f0ffff;
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  width: 50%;
+}
+
+.Questions {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0 auto;
+  margin-top: -30px;
+  text-align: center;
+  width: 80%;
+}
+
+.TrueFalse {
+  display: flex;
+  gap: 150px;
+  position: absolute;
+  top: 72%;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  color: #11142b;
+  cursor: pointer;
+  font-family: podkova;
+  font-size: 16px;
+  padding: 8px 16px;
+}
+
+.TrueBtn:hover {
+  color: #f0ffff;
+  background: #228b22;
+}
+
+.FalseBtn:hover {
+  color: #f0ffff;
+  background: #b22222;
+}
+
+@media screen and (max-width: 768px) {
+  .Question__Box {
+    height: 60%;
+    width: 60%;
+  }
+
+  .TrueFalse {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .Question__Page {
+    height: 120vh;
+  }
+
+  .Question__Box {
+    height: 70%;
+    width: 70%;
+  }
+
+  .TrueFalse {
+    position: absolute;
+    gap: 20px;
+    top: 95%;
+  }
+}
